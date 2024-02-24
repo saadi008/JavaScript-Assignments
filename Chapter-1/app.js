@@ -10,3 +10,8 @@ alert ("Error! Please enter a valid password.")
 // Q)3. Write a script to display following message on your web page: (Hint : Use line break)
 
 alert ("Welcome to Js Land...\n Happy Coding!")
+
+// Q) 4. Write a script to display following messages in sequence:
+
+alert ("Welcome to Js Land..")
+alert ("Happy Coding!")
