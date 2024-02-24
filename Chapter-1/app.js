@@ -3,6 +3,10 @@
 
 alert("Wlcome to my Website")
 
-//Q)2. 2. Write a script to display following message on your web page:
+//Q)2. Write a script to display following message on your web page:
 
 alert ("Error! Please enter a valid password.")
+
+// Q)3. Write a script to display following message on your web page: (Hint : Use line break)
+
+alert ("Welcome to Js Land...\n Happy Coding!")
