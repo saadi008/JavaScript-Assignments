@@ -15,3 +15,8 @@ alert ("Welcome to Js Land...\n Happy Coding!")
 
 alert ("Welcome to Js Land..")
 alert ("Happy Coding!")
+
+// Q)5. Generate the following message through browser’s developer console:
+
+var greeting = ("Hello... I can run Js through my web browser's console")
+console.log (greeting)
