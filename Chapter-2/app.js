@@ -48,8 +48,20 @@ var book = ("A smarter way to learn JavaScript.")
 alert ("I am trying to learn from the book " + book)
 
 
-// 8. Write a script to display this in browser through JS
+// Q) 8. Write a script to display this in browser through JS
 
 var textToDisplay = ("Yah! I can write HTML content through JavaScript.")
 var contentDiv = document.getElementById("content");
 contentDiv.innerHTML = textToDisplay;
+
+
+// Q) 9. Store following string in a variable and show in alert and browser through JS “▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬”
+
+ // Store the string in a variable
+ var myString = "▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬";
+
+ // Display the string in an alert
+ alert(myString);
+
+ // Display the string in the browser
+ document.write(myString);
