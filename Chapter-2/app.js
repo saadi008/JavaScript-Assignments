@@ -25,3 +25,8 @@ alert (studentInfo)
 
 studentInfo = ("Name: Saad Ali \n Age: 20 \n Course: Web & Mobile Application")
 alert (studentInfo)
+
+// Q) 5. Write a script to display the following alert using one JS variable:
+
+var food = ("PIZZA\n PIZZ \n PIZ \n PI \n P")
+alert (food)
