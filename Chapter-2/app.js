@@ -17,3 +17,11 @@ c) Display the message in alert box.*/
 
 var message = ("Hello World")
 alert (message)
+
+// Q) 4. Write a script to save student’s bio data in JS variables and show the data in alert boxes.
+
+var studentInfo = ("Name: King Babar Azam \n Age: 29 \n Sport: Cricket")
+alert (studentInfo)
+
+studentInfo = ("Name: Saad Ali \n Age: 20 \n Course: Web & Mobile Application")
+alert (studentInfo)
