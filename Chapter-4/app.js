@@ -29,7 +29,21 @@ var message = ("Legal variable names: " + "\n" + myVariable + "\n" + firstName +
     illegal3 + "\n" + illega4 + "\n" + illegal5)
 alert(message)
 
+/*Q)3 Display this in your browser
+a) A heading stating “Rules for naming JS variables”
+b) Variable names can only contain ______, ______,
+______ and ______.
+For example $my_1stVariable
+c) Variables must begin with a ______, ______ or
+_____. For example $name, _name or name
+d) Variable names are case _________
+e) Variable names should not be JS _________ */
 
+document.write("<h1>A) Rules for naming JS variables</h1>");
+document.write ("B) Variable names can only contain number $ and _  For example $my_1stVariable" + "<br>")
+document.write ("C)Variables must begin with a letters, $ or _.  For example $name, _name or name " + "<br>")
+document.write("D) Variable names are case sensitive" + "<br>")
+document.write("E) Variable names should not be JS keywords " + "<br>")
 
 
 
