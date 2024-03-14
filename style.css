@@ -27,8 +27,8 @@ h1:hover {
 }
 
 .chapter-link {
-    flex: 1 1 300px;
-    max-width: 100%;
+    flex: 1 1 calc(33.33% - 20px); /* Three cards per row, minus gap */
+    max-width: calc(33.33% - 20px); /* Three cards per row, minus gap */
     padding: 40px;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.7);
@@ -59,7 +59,8 @@ h1:hover {
     }
 
     .chapter-link {
-        width: calc(100% - 40px); /* Subtracting the padding */
+        width: calc(100% - 40px); /* Full width, minus padding */
+        max-width: calc(100% - 40px); /* Full width, minus padding */
         margin-bottom: 20px;
     }
 }
