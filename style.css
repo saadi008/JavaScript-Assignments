@@ -1,7 +1,9 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #222;
-    color: #fff;
+    background-image: url('https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #eb6f6f;
     margin: 0;
     padding: 20px;
 }
@@ -9,6 +11,12 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 30px;
+    transition: transform 0.5s; /* Added transition for smooth animation */
+    transform-style: preserve-3d; /* Enable 3D space for child elements */
+}
+
+h1:hover {
+    transform: rotateY(90deg); /* Apply 3D rotation on hover */
 }
 
 .container {
@@ -19,18 +27,27 @@ h1 {
 }
 
 .chapter-link {
-    display: block;
+    flex: 1 1 300px;
+    max-width: 100%;
     padding: 40px;
     border-radius: 20px;
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-image: linear-gradient(to bottom right, rgba(124, 77, 77, 0.966), rgba(172, 56, 56, 0.973)), url('card-background.jpg');
+    background-size: cover;
     text-decoration: none;
     color: #fff;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.5s; /* Added transition for smooth hover animation */
     box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform-style: preserve-3d; /* Enable 3D space for child elements */
 }
 
 .chapter-link:hover {
-    background-color: #555;
+    background-color: rgba(0, 0, 0, 0.8); /* Darken the card background color on hover */
+    transform: rotateY(90deg); /* Apply 3D rotation on hover */
 }
 
 @media screen and (max-width: 768px) {
@@ -40,8 +57,8 @@ h1 {
     }
 
     .chapter-link {
-        width: 80%; /* Adjust as needed */
-        max-width: 300px;
+        width: 80%;
+        max-width: 100%;
         margin-bottom: 20px;
     }
 }
