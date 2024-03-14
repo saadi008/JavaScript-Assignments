@@ -26,9 +26,6 @@ h1 {
     text-decoration: none;
     color: #fff;
     transition: background-color 0.3s;
-    width: calc(33.33% - 40px); /* Adjust according to your layout */
-    max-width: 300px;
-    text-align: center;
     box-sizing: border-box;
 }
 
@@ -43,6 +40,8 @@ h1 {
     }
 
     .chapter-link {
-        width: 100%;
+        width: 80%; /* Adjust as needed */
+        max-width: 300px;
+        margin-bottom: 20px;
     }
 }
