@@ -2,7 +2,6 @@ body {
     font-family: Arial, sans-serif;
     background-image: url('https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
     background-size: cover;
-    background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.5);
     color: #eb6f6f;
     margin: 0;
@@ -12,12 +11,12 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 30px;
-    transition: transform 0.5s; /* Added transition for smooth animation */
-    transform-style: preserve-3d; /* Enable 3D space for child elements */
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
 }
 
 h1:hover {
-    transform: rotateY(90deg); /* Apply 3D rotation on hover */
+    transform: rotateY(90deg);
 }
 
 .container {
@@ -35,20 +34,22 @@ h1:hover {
     background-color: rgba(0, 0, 0, 0.7);
     background-image: linear-gradient(to bottom right, rgba(124, 77, 77, 0.966), rgba(172, 56, 56, 0.973)), url('card-background.jpg');
     background-size: cover;
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-position: center; /* Center the background image */
     text-decoration: none;
     color: #fff;
-    transition: background-color 0.3s, transform 0.5s; /* Added transition for smooth hover animation */
+    transition: background-color 0.3s, transform 0.5s;
     box-sizing: border-box;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transform-style: preserve-3d; /* Enable 3D space for child elements */
+    transform-style: preserve-3d;
 }
 
 .chapter-link:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Darken the card background color on hover */
-    transform: rotateY(90deg); /* Apply 3D rotation on hover */
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: rotateY(90deg);
 }
 
 @media screen and (max-width: 768px) {
@@ -58,8 +59,7 @@ h1:hover {
     }
 
     .chapter-link {
-        width: 80%;
-        max-width: 100%;
+        width: calc(100% - 40px); /* Subtracting the padding */
         margin-bottom: 20px;
     }
 }
