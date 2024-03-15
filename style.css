@@ -13,7 +13,7 @@ h1 {
 }
 
 h1:hover {
-    transform: rotateY(180deg);
+    transform: rotateY(90deg);
 }
 
 .container {
@@ -42,7 +42,7 @@ h1:hover {
 
 .chapter-link:hover {
     background-color: #555;
-    transform: rotateY(180deg);
+    transform: rotateY(90deg);
 }
 
 @media screen and (max-width: 768px) {
