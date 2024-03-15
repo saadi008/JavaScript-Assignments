@@ -1,16 +1,16 @@
-// Define an array to hold the questions in order
+
 var questionQueue = [question1, question2, question3, question4, question5];
-var currentQuestionIndex = 0; // Track the index of the current question
+var currentQuestionIndex = 0;
 
 // Function to execute the next question
 function executeNextQuestion() {
-    // Check if there are more questions to execute
+
     if (currentQuestionIndex < questionQueue.length) {
-        // Get the current question function from the queue
+
         var currentQuestion = questionQueue[currentQuestionIndex];
-        // Increment the current question index for the next iteration
+
         currentQuestionIndex++;
-        // Call the current question function
+
         currentQuestion();
     }
 }
@@ -18,12 +18,12 @@ function executeNextQuestion() {
 // Function to display output
 function displayOutput(output) {
     var outputDiv = document.getElementById("output");
-    var questionNumber = currentQuestionIndex; // Get the current question number
-    outputDiv.innerHTML += "<h2>Question " + questionNumber + "</h2>"; // Display the question number
+    var questionNumber = currentQuestionIndex;
+    outputDiv.innerHTML += "<h2>Question " + questionNumber + "</h2>";
     outputDiv.innerHTML += "<div class='result-container'>" + output + "</div>";
 }
 
-// Function to display buttons for next question
+
 function displayNextButton() {
     var buttonsDiv = document.getElementById("buttons");
     buttonsDiv.innerHTML = '<button onclick="executeNextQuestion()">Next Question</button>';
@@ -44,7 +44,7 @@ function question1() {
     num--;
     var result7 = "Now the value of your number is " + num + ".";
     displayOutput(result1 + result2 + result3 + result4 + result5 + result6 + result7);
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
@@ -54,7 +54,7 @@ function question2() {
     var result = --a - --b + ++b + b--;
     var explanation = "--a: Decrement a (a is now 1)<br>--a - --b: Decrement a and decrement b (a is now 0, b is now 0)<br>--a - --b + ++b: Decrement a, decrement b, and increment b (a is still 0, b is now 1)<br>--a - --b + ++b + b--: Decrement a, decrement b, increment b, and then use b for calculation (a is still 0, b is now 0 after calculation)";
     displayOutput("a = 2, b = 1<br>Result: " + result + "<br>Explanation:<br>" + explanation);
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
@@ -63,7 +63,7 @@ function question3() {
     var name = prompt("Enter your name:");
     var greeting = "Hello, " + name + "!";
     displayOutput(greeting);
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
@@ -75,7 +75,7 @@ function question4() {
         multiplicationTable += number + " x " + i + " = " + (number * i) + "<br>";
     }
     displayOutput("Multiplication Table of " + number + ":<br>" + multiplicationTable);
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
@@ -97,9 +97,9 @@ function question5() {
     result += "<tr><th>Total</th><th>" + (totalMarks * 3) + "</th><th>" + totalObtainedMarks + "</th></tr>";
     result += "</table></div><br>Percentage: " + percentage.toFixed(2) + "%";
     displayOutput(result);
-    
+
 }
 
 
-// Start executing questions by calling the executeNextQuestion function
+
 executeNextQuestion();

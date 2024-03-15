@@ -1,14 +1,12 @@
 // Define an array to hold the questions in order
 var questionQueue = [question1, question2, question3, question4, question5, question6, question7, question8, question9, question10, question11];
-var currentQuestionIndex = 0; // Track the index of the current question
+var currentQuestionIndex = 0;
 
 // Function to execute the next question
 function executeNextQuestion() {
-    // Check if there are more questions to execute
+
     if (currentQuestionIndex < questionQueue.length) {
-        // Get the current question function from the queue
         var currentQuestion = questionQueue[currentQuestionIndex];
-        // Increment the current question index for the next iteration
         currentQuestionIndex++;
         // Call the current question function
         currentQuestion();
@@ -19,7 +17,7 @@ function executeNextQuestion() {
 function displayOutput(output) {
     var outputDiv = document.getElementById("output");
     var questionNumber = currentQuestionIndex; // Get the current question number
-    outputDiv.innerHTML += "<h2>Question " + questionNumber + "</h2>"; // Display the question number
+    outputDiv.innerHTML += "<h2>Question " + questionNumber + "</h2>";
     outputDiv.innerHTML += "<div class='result-container'>" + output + "</div>";
 }
 
@@ -37,7 +35,7 @@ function question1() {
     } else {
         displayOutput("Welcome!");
     }
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
@@ -51,7 +49,7 @@ function question2() {
     } else {
         displayOutput("Good Morning");
     }
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
@@ -71,7 +69,7 @@ function question3() {
         default:
             displayOutput("Invalid color");
     }
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
@@ -83,7 +81,7 @@ function question4() {
     } else {
         displayOutput("You have enough fuel");
     }
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
@@ -130,7 +128,7 @@ function question5() {
     if ("car" < "cat") {
         displayOutput("car is smaller than cat");
     }
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
@@ -169,13 +167,13 @@ function question6() {
     result += "<tr><th>Total</th><th>" + (totalMarks * 3) + "</th><th>" + totalObtainedMarks + "</th></tr>";
     result += "</table></div><br>Percentage: " + percentage.toFixed(2) + "%<br>Grade: " + grade + "<br>Remarks: " + remarks;
     displayOutput(result);
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
 // Function for question 7
 function question7() {
-    var secretNumber = 7; // Secret number ranging from 1 to 10
+    var secretNumber = 7;
     var guess = parseInt(prompt("Guess the secret number (between 1 and 10):"));
     if (guess === secretNumber) {
         displayOutput("Bingo! Correct answer");
@@ -184,7 +182,7 @@ function question7() {
     } else {
         displayOutput("Wrong guess! The secret number was " + secretNumber);
     }
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
@@ -196,7 +194,7 @@ function question8() {
     } else {
         displayOutput("The number is not divisible by 3.");
     }
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
@@ -208,7 +206,7 @@ function question9() {
     } else {
         displayOutput("The number is odd.");
     }
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
@@ -226,7 +224,7 @@ function question10() {
     } else {
         displayOutput("It's freezing outside!");
     }
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
@@ -254,9 +252,9 @@ function question11() {
         result = "Invalid operation";
     }
     displayOutput("Result: " + result);
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
-// Start executing questions by calling the executeNextQuestion function
+
 executeNextQuestion();

@@ -1,16 +1,16 @@
-// Define an array to hold the questions in order
+
 var questionQueue = [question1, question2, question3, question4, question5, question6, question7, question8, question9, question10, question11, question12, question13];
-var currentQuestionIndex = 0; // Track the index of the current question
+var currentQuestionIndex = 0;
 
 // Function to execute the next question
 function executeNextQuestion() {
-    // Check if there are more questions to execute
+
     if (currentQuestionIndex < questionQueue.length) {
-        // Get the current question function from the queue
+
         var currentQuestion = questionQueue[currentQuestionIndex];
-        // Increment the current question index for the next iteration
+
         currentQuestionIndex++;
-        // Call the current question function
+
         currentQuestion();
     }
 }
@@ -33,7 +33,7 @@ function question1() {
     var num2 = parseFloat(prompt("Enter the second number for Question 1:"));
     var sum = num1 + num2;
     displayOutput("<div class='question-container'><h2>Question 1</h2><p>The sum of " + num1 + " and " + num2 + " is: " + sum + "</p></div>");
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
@@ -47,7 +47,7 @@ function question2() {
     var division = num1 / num2;
     var modulus = num1 % num2;
     displayOutput("<div class='question-container'><h2>Question 2</h2><p>Sum: " + num1 + " + " + num2 + " = " + addition + "</p><p>Subtraction: " + num1 + " - " + num2 + " = " + subtraction + "</p><p>Multiplication: " + num1 + " * " + num2 + " = " + multiplication + "</p><p>Division: " + num1 + " / " + num2 + " = " + division + "</p><p>Modulus: " + num1 + " % " + num2 + " = " + modulus + "</p></div>");
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
@@ -65,7 +65,7 @@ function question3() {
     displayOutput("<p>Value after decrement is: " + myVariable + "</p>");
     var remainder = myVariable % 3;
     displayOutput("<p>The remainder is: " + remainder + "</p></div>");
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
@@ -75,7 +75,7 @@ function question4() {
     var numberOfTickets = 5;
     var totalCost = ticketPrice * numberOfTickets;
     displayOutput("<div class='question-container'><h2>Question 4</h2><p>The cost of buying " + numberOfTickets + " tickets to a movie is: " + totalCost + " PKR</p></div>");
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
@@ -88,7 +88,7 @@ function question5() {
         displayOutput("<p>" + number + " x " + i + " = " + result + "</p>");
     }
     displayOutput("</div>");
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
@@ -101,7 +101,7 @@ function question6() {
     var fahrenheitTemp = parseFloat(prompt("Enter a temperature in Fahrenheit:"));
     var celsiusTemp = (fahrenheitTemp - 32) * 5 / 9;
     displayOutput("<p>" + fahrenheitTemp + "°F is " + celsiusTemp + "°C</p></div>");
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
@@ -122,7 +122,7 @@ function question7() {
     displayOutput("<p>Ordered quantity of item 2: " + quantityItem2 + "</p>");
     displayOutput("<p>Shipping charges: $" + shippingCharges + "</p>");
     displayOutput("<h3>Total cost: $" + totalCost + "</h3></div>");
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
@@ -132,7 +132,7 @@ function question8() {
     var marksObtained = parseFloat(prompt("Enter the marks obtained:"));
     var percentage = (marksObtained / totalMarks) * 100;
     displayOutput("<div class='question-container'><h2>Question 8</h2><p>Total Marks: " + totalMarks + "</p><p>Marks Obtained: " + marksObtained + "</p><h3>Percentage: " + percentage.toFixed(2) + "%</h3></div>");
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
@@ -144,7 +144,7 @@ function question9() {
     var exchangeRateSARtoPKR = 28;
     var totalCurrencyInPKR = (usDollars * exchangeRateUSDtoPKR) + (saudiRiyals * exchangeRateSARtoPKR);
     displayOutput("<div class='question-container'><h2>Question 9</h2><p>Total US Dollars: " + usDollars + "</p><p>Total Saudi Riyals: " + saudiRiyals + "</p><h3>Total Currency in PKR: " + totalCurrencyInPKR.toFixed(2) + " PKR</h3></div>");
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
@@ -153,7 +153,7 @@ function question10() {
     var initialValue = 10;
     var result = ((initialValue + 5) * 10) / 2;
     displayOutput("<div class='question-container'><h2>Question 10</h2><p>Initial Value: " + initialValue + "</p><p>Result: " + result + "</p></div>");
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
@@ -164,7 +164,7 @@ function question11() {
     var age1 = currentYear - birthYear;
     var age2 = age1 - 1;
     displayOutput("<div class='question-container'><h2>Question 11</h2><p>They are either " + age1 + " or " + age2 + " years old</p></div>");
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
@@ -174,7 +174,7 @@ function question12() {
     var circumference = 2 * Math.PI * radius;
     var area = Math.PI * radius * radius;
     displayOutput("<div class='question-container'><h2>Question 12</h2><p>The circumference is " + circumference.toFixed(2) + "</p><p>The area is " + area.toFixed(2) + "</p></div>");
-    // Proceed to the next question after displaying the result
+
     displayNextButton();
 }
 
@@ -186,8 +186,8 @@ function question13() {
     var amountPerDay = parseFloat(prompt("Enter the estimated amount per day:"));
     var totalSnacksNeeded = (maxAge - currentAge) * 365 * amountPerDay;
     displayOutput("<div class='question-container'><h2>Question 13</h2><p>You will need " + totalSnacksNeeded + " to last you until the ripe old age of " + maxAge + "</p></div>");
-    // No need for next question button as this is the last question
+
 }
 
-// Start executing questions by calling the executeNextQuestion function
+
 executeNextQuestion();
