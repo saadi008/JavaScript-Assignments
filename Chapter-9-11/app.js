@@ -1,10 +1,9 @@
-// Define an array to hold the questions in order
+
 var questionQueue = [question1, question2, question3, question4, question5, question6, question7, question8, question9, question10, question11];
 var currentQuestionIndex = 0;
 
 // Function to execute the next question
 function executeNextQuestion() {
-
     if (currentQuestionIndex < questionQueue.length) {
         var currentQuestion = questionQueue[currentQuestionIndex];
         currentQuestionIndex++;
@@ -13,18 +12,29 @@ function executeNextQuestion() {
     }
 }
 
+// Function to execute the previous question
+function repeatLastQuestion() {
+    if (currentQuestionIndex > 0) {
+        currentQuestionIndex--; // Decrement to repeat the last question
+        executeNextQuestion();
+    }
+}
+
 // Function to display output
 function displayOutput(output) {
     var outputDiv = document.getElementById("output");
-    var questionNumber = currentQuestionIndex; // Get the current question number
+    var questionNumber = currentQuestionIndex;
     outputDiv.innerHTML += "<h2>Question " + questionNumber + "</h2>";
     outputDiv.innerHTML += "<div class='result-container'>" + output + "</div>";
 }
 
 // Function to display buttons for next question
-function displayNextButton() {
+function displayButtons() {
     var buttonsDiv = document.getElementById("buttons");
     buttonsDiv.innerHTML = '<button onclick="executeNextQuestion()">Next Question</button>';
+    if (currentQuestionIndex > 0) {
+        buttonsDiv.innerHTML += '<button onclick="repeatLastQuestion()">Repeat Question</button>';
+    }
 }
 
 // Function for question 1
@@ -36,7 +46,7 @@ function question1() {
         displayOutput("Welcome!");
     }
 
-    displayNextButton();
+    displayButtons();
 }
 
 // Function for question 2
@@ -50,7 +60,7 @@ function question2() {
         displayOutput("Good Morning");
     }
 
-    displayNextButton();
+    displayButtons();
 }
 
 // Function for question 3
@@ -70,7 +80,7 @@ function question3() {
             displayOutput("Invalid color");
     }
 
-    displayNextButton();
+    displayButtons();
 }
 
 // Function for question 4
@@ -82,7 +92,7 @@ function question4() {
         displayOutput("You have enough fuel");
     }
 
-    displayNextButton();
+    displayButtons();
 }
 
 // Function for question 5
@@ -129,7 +139,7 @@ function question5() {
         displayOutput("car is smaller than cat");
     }
 
-    displayNextButton();
+    displayButtons();
 }
 
 // Function for question 6
@@ -168,7 +178,7 @@ function question6() {
     result += "</table></div><br>Percentage: " + percentage.toFixed(2) + "%<br>Grade: " + grade + "<br>Remarks: " + remarks;
     displayOutput(result);
 
-    displayNextButton();
+    displayButtons();
 }
 
 // Function for question 7
@@ -183,7 +193,7 @@ function question7() {
         displayOutput("Wrong guess! The secret number was " + secretNumber);
     }
 
-    displayNextButton();
+    displayButtons();
 }
 
 // Function for question 8
@@ -195,7 +205,7 @@ function question8() {
         displayOutput("The number is not divisible by 3.");
     }
 
-    displayNextButton();
+    displayButtons();
 }
 
 // Function for question 9
@@ -207,7 +217,7 @@ function question9() {
         displayOutput("The number is odd.");
     }
 
-    displayNextButton();
+    displayButtons();
 }
 
 // Function for question 10
@@ -225,7 +235,7 @@ function question10() {
         displayOutput("It's freezing outside!");
     }
 
-    displayNextButton();
+    displayButtons();
 }
 
 // Function for question 11
@@ -253,8 +263,8 @@ function question11() {
     }
     displayOutput("Result: " + result);
 
-    displayNextButton();
+    displayButtons();
 }
 
-
 executeNextQuestion();
+
