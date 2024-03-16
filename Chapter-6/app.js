@@ -1,18 +1,19 @@
-
 var questionQueue = [question1, question2, question3, question4, question5];
 var currentQuestionIndex = 0;
 
 // Function to execute the next question
 function executeNextQuestion() {
-
     if (currentQuestionIndex < questionQueue.length) {
-
         var currentQuestion = questionQueue[currentQuestionIndex];
-
         currentQuestionIndex++;
-
         currentQuestion();
     }
+}
+
+// Function to repeat the current question
+function repeatCurrentQuestion() {
+    var currentQuestion = questionQueue[currentQuestionIndex - 1];
+    currentQuestion();
 }
 
 // Function to display output
@@ -23,10 +24,11 @@ function displayOutput(output) {
     outputDiv.innerHTML += "<div class='result-container'>" + output + "</div>";
 }
 
-
-function displayNextButton() {
+// Function to display Next and Repeat buttons
+function displayButtons() {
     var buttonsDiv = document.getElementById("buttons");
     buttonsDiv.innerHTML = '<button onclick="executeNextQuestion()">Next Question</button>';
+    buttonsDiv.innerHTML += '<button onclick="repeatCurrentQuestion()">Repeat Question</button>';
 }
 
 // Function for question 1
@@ -44,8 +46,7 @@ function question1() {
     num--;
     var result7 = "Now the value of your number is " + num + ".";
     displayOutput(result1 + result2 + result3 + result4 + result5 + result6 + result7);
-
-    displayNextButton();
+    displayButtons();
 }
 
 // Function for question 2
@@ -54,8 +55,7 @@ function question2() {
     var result = --a - --b + ++b + b--;
     var explanation = "--a: Decrement a (a is now 1)<br>--a - --b: Decrement a and decrement b (a is now 0, b is now 0)<br>--a - --b + ++b: Decrement a, decrement b, and increment b (a is still 0, b is now 1)<br>--a - --b + ++b + b--: Decrement a, decrement b, increment b, and then use b for calculation (a is still 0, b is now 0 after calculation)";
     displayOutput("a = 2, b = 1<br>Result: " + result + "<br>Explanation:<br>" + explanation);
-
-    displayNextButton();
+    displayButtons();
 }
 
 // Function for question 3
@@ -63,8 +63,7 @@ function question3() {
     var name = prompt("Enter your name:");
     var greeting = "Hello, " + name + "!";
     displayOutput(greeting);
-
-    displayNextButton();
+    displayButtons();
 }
 
 // Function for question 4
@@ -75,8 +74,7 @@ function question4() {
         multiplicationTable += number + " x " + i + " = " + (number * i) + "<br>";
     }
     displayOutput("Multiplication Table of " + number + ":<br>" + multiplicationTable);
-
-    displayNextButton();
+    displayButtons();
 }
 
 // Function for question 5
@@ -97,9 +95,7 @@ function question5() {
     result += "<tr><th>Total</th><th>" + (totalMarks * 3) + "</th><th>" + totalObtainedMarks + "</th></tr>";
     result += "</table></div><br>Percentage: " + percentage.toFixed(2) + "%";
     displayOutput(result);
-
+    displayButtons();
 }
-
-
 
 executeNextQuestion();
