@@ -1,7 +1,11 @@
 body {
     font-family: Arial, sans-serif;
+    background-image: url('download.png');
+    background-size: cover;
+    /* background-position: center; */
+    background-repeat: no-repeat;
     background-color: #222;
-    color: #fff;
+    color: #fff6f6;
     margin: 0;
     padding: 20px;
 }
@@ -37,7 +41,8 @@ h1:hover {
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center align text vertically */
+    justify-content: center;
+    /* Center align text vertically */
 }
 
 .chapter-link:hover {
@@ -46,6 +51,10 @@ h1:hover {
 }
 
 @media screen and (max-width: 768px) {
+    body {
+        background-size: cover; /* Adjusted background size for smaller screens */
+    }
+
     .container {
         flex-direction: column;
         align-items: center;
@@ -59,6 +68,10 @@ h1:hover {
 }
 
 @media screen and (max-width: 480px) {
+    body {
+        background-position: top; /* Adjust the background position for smaller screens */
+    }
+
     .chapter-link {
         padding: 20px;
         font-size: 16px;
