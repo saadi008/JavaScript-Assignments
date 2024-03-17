@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+/* CSS styling for the assignment title */
+.assignment-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#output {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.result-container {
+    background-color: #d4edda;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.result-container h3 {
+    color: #155724;
+}
+
+.result-container p {
+    color: #0c5460;
+    margin: 5px 0;
+}
+
+/* Buttons */
+.buttons-container {
+    text-align: center;
+    margin-top: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.buttons-container button {
+    padding: 15px 30px;
+    margin: 10px;
+    background-color: #007bff; 
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buttons-container button:hover {
+    background-color: #0056b3;
+}
