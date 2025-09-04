@@ -142,7 +142,7 @@
 
 // var tableNumber = prompt("Enter a number to print a table :");
 // document.write("<h3>Multiplication table of " + tableNumber + "</h3>");
-// for (var i = 1; i <= 9; i++) {
+// for (var i = 1; i <= 10; i++) {
 // document.write(tableNumber + " x " + i + " = " + (tableNumber * i) + "<br/>");
 // }
 

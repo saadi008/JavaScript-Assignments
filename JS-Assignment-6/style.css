@@ -1,0 +1,41 @@
+/* Table Styling */
+#resultTable {
+    width: 60%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  /* Header row */
+  #resultTable th {
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-size: 16px;
+  }
+  
+  /* Data rows */
+  #resultTable td {
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Hover effect */
+  #resultTable tr:hover {
+    background-color: #f2f2f2;
+  }
+  
+  /* Last row (Percentage) highlight */
+  #resultTable tr:last-child th {
+    background: #2196F3;
+    color: white;
+    font-size: 18px;
+  }
+  
+  
