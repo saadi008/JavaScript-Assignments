@@ -288,29 +288,36 @@
 
 
 
+// 2. Student Marks Average – Solution
+// Ek empty array marks = [] banao.
+// Loop chalao aur user se multiple marks input lo.
+// Sare marks ka sum calculate karo.
+// Average = sum / marks.length nikaalo.
+// Condition:
+// Agar average >= 50 → "Pass"
+// Nahi to "Fail".
 
+// var  marks = [];
+// var totalStudents = +prompt("How many students marks you wanted to add?");
+// var sum = 0;
 
+// for(var i = 0; i < totalStudents; i ++){
+//     var mark = +prompt("Enter marks of student: " + (i + 1) + ":");
+//     marks.push(mark);
+//     sum += mark;
+// }
 
+// var average = sum / totalStudents;
 
+// console.log("Marks:", marks);
+// console.log("Average:", average);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// if (average >= 50) {
+//     console.log("Pass");
+// } else {
+//     console.log("Fail");
+    
+// }
 
 
 
@@ -322,21 +329,23 @@
 // Agar mil jaye → "Username already taken".
 // Agar na mile → "Username available".
 
+// var users = ["saad", "ali", "babar"];
+// var newUser = prompt("Enter a username:");
+// var isFound = false;
 
+// for(var i = 0; i < users.length; i++){
+//     if (users[i] === newUser) {
+//         isFound = true;
+//         break;
+//     }
+// }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+// if (isFound) {
+//     console.log("Username already taken");
+// } else {
+//     console.log("Username Available");
+    
+// }
 
 
 
@@ -348,24 +357,23 @@
 // Agar number even ho (divisible by 2) → print karo.
 // Agar odd ho → skip kar do.
 
+// var numbers = [];
 
+// for(var i = 0; i < 5; i++){
+//     var num = +prompt("Enter number" + (i + 1) + ":");
+//     numbers.push(num);
+// }
 
+// console.log("All Numbers: ", numbers);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// console.log("Even Numbers:");
+// for(var j = 0; j < numbers.length; j++){
+//     if (numbers[j] % 2 === 0) {
+        
+//         console.log(numbers[j]);
+        
+//     }
+// }
 
 
 
@@ -377,3 +385,23 @@
 // Agar user ka password correct hai → "Login Successful" aur loop ruk jaye.
 // Agar galat hai → chances kam hote jayen.
 // Agar 3 bar galat ho gaya → "Account Locked".
+
+// var correctPassword = "12345";
+// var isFound = false;
+
+// for(var i = 0;  i < 3; i++){
+//     var userPassword = prompt("Enter your password:");
+
+//     if (userPassword === correctPassword) {
+//         console.log("Login Successful");
+//         isFound = true;
+//         break;
+//     } else {
+//         console.log("Incorrect password, try again.");
+        
+//     }
+// }
+
+// if (!isFound) {
+//     console.log("Account Locked");
+// }
