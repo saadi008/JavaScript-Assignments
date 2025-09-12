@@ -405,3 +405,98 @@
 // if (!isFound) {
 //     console.log("Account Locked");
 // }
+
+
+
+
+// Q1 (Shopping Website – Cart Total with User Input)
+// User se poochho ke wo kitni items kharidna chahta hai.
+// Phir loop use karke user se har item ka price prompt() se lo aur array mein store karo.
+// End mein:
+// Cart ka total calculate karo.
+// Agar total >= 3000 ho to message show karo "You got free delivery!", warna "Delivery charges: 200".
+
+
+
+// var numberOfItems = +prompt("Enter hoe many items you wanted to buy:");
+// var cart = [];
+// var total = 0;
+
+// for(var i = 0; i < numberOfItems; i++){
+//     var price = +prompt("Enter price of item " + (i + 1) + ":");
+//     cart.push(price);
+// }
+
+// for(var j = 0; j < cart.length; j++){
+//     total += cart[j];
+// }
+
+// if (total >= 3000) {
+//     document.write("Your cart total is " + total + ". You got free delivery!");
+// } else {
+//     document.write("Your cart total is " + total + ". Delivery charges: 200");
+// }
+
+
+
+
+// Q2 (Student Portal – Result Checker with User Input)
+// User se poochho ke kitne students ke marks enter karne hain.
+// Phir loop mein har student ke marks prompt() se lo aur array mein store karo.
+// End mein:
+// Har student ka result print karo: "Pass" (marks ≥ 50) warna "Fail".
+// Total pass aur fail count bhi show karo.
+
+
+// var totalStudents = +prompt("Enter number of students:");
+// var marks = [];
+
+// for(var i = 0; i < totalStudents; i++){
+//     var score = +prompt("Enter marks of student " + (i + 1) + ":");
+//     marks.push(score);
+// }
+
+// var passCount = 0;
+// var failCount = 0;
+
+// for(var i = 0; i < marks.length; i ++){
+//     if (marks[i] >= 50) {
+//         document.write("Student " + (i + 1) + " scored " + marks[i] + " Pass <br/>");
+//         passCount++;
+//     } else {
+//         document.write("Student " + (i + 1) + " scored " + marks[i] + " Fail <br/>");
+//         failCount++;
+//     }
+// }
+
+// document.write("<br/>Total Pass Students: " + passCount);
+// document.write("<br/>Total Fail Students: " + failCount);
+
+
+
+
+
+// Q3 (Hospital Management – Patient Queue with User Input)
+// User se poochho ke kitne patients hain.
+// Loop use karke patient ke names prompt() se lo aur array mein store karo.
+// Har patient ko ek token number assign karo (1 se shuru).
+// Agar patient ka naam "Jana" ho to usko VIP declare karo.
+
+
+// var totalPatient = +prompt("How many patient you wanted to Register:");
+// var patientName = [];
+
+// for(var i = 0; i < totalPatient; i ++){
+//     var names = prompt("Enter name of patient " + (i + 1) + ":");
+//     patientName.push(names);
+// }
+
+// for (var i = 0; i < patientName.length; i ++){
+//     var token = i + 1;
+//     if (patientName[i] === "saad") {
+//         document.write("Token " + token + " → " + patientName[i] + " (VIP Patient 🚨)<br>");
+//     } else {
+//         document.write("Token " + token + " → " + patientName[i] + "<br>");
+//     }
+// }
+
