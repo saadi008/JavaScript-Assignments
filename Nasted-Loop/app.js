@@ -242,3 +242,121 @@
 //     }
 //     console.log(row);
 // }
+
+
+
+
+//              New Practice Questions (Nested Loops)
+
+// Q1. Multiplication Table
+// Ek nested loop likho jo 1 se 10 tak ka multiplication table print kare.
+
+// for (var i = 2; i <= 10; i++){
+//     console.log("Table of: " + i);
+    
+//     for(var j = 1; j <=10;  j++){
+//         console.log(i + " X " + j + " = " + (i * j));
+//     }
+//     console.log("");
+    
+// }
+
+
+
+
+// Q2: Star Pattern
+
+// for(var i = 1; i <= 10; i++){
+//     var Star = "";
+//     for(var j = 1; j <=i; j++){
+
+//         Star += "*";
+//     }
+//     console.log(Star);
+    
+// }
+
+
+
+
+// Q.3 D2 Array
+
+// var arr  = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9]
+// ];
+
+// for (var i = 0; i < arr.length; i++){
+//     var row = "";
+
+//     for(var j = 0; j < arr[i].length; j++){
+
+//         row += arr[i][j] + " ";
+//     }
+//     console.log(row);
+    
+// }
+
+
+
+
+
+// Q.4 Student Grade:
+
+// var students = [
+//     ["Ali", [85, 90, 88]],
+//     ["Sara", [70, 75, 80]],
+//     ["Ahmed", [60, 65, 55]]
+// ];
+
+// for (var i = 0; i < students.length; i++){
+//     var name = students[i][0];
+//     var marks = students[i][1];
+//     var total = 0;
+    
+//     for(var j = 0; j < marks.length; j++){
+//         total += marks[j];
+//     }
+
+//     var average = total / marks.length;
+//     var grade = "";
+
+//     if (average >= 90) {
+//         grade = "A+";
+//     } else if (average >= 80) {
+//         grade = "A";
+//     } else if (average >= 70) {
+//         grade = "B";
+//     } else if (average >= 60) {
+//         grade = "C";
+//     } else if (average >= 50) {
+//         grade = "D";
+//     } else {
+//         grade = "Fail";
+//     }
+
+//     console.log(name + " - Average: " + average.toFixed(2) + " - Grade: " + grade);
+    
+// }
+
+
+
+
+
+// Q4. Library Books
+// Ek 2D array diya gaya hai jo library ki books ko represent karta hai:
+
+// var library = [
+//     ["Math Book", "Physics Book"],
+//     ["English Book", "Urdu Book"],
+//     ["Computer Book", "History Book"]
+// ];
+
+// for(var i = 0; i < library.length; i++){
+
+//     var shelf = library[i];
+//     var books = shelf.join(", ");
+//     console.log("Shelf " + (i + 1) + ": " + books);
+    
+// }
