@@ -171,17 +171,30 @@
 
 // 5. Ek program likho jo ek paragraph le aur har sentence ka pehla letter uppercase kare (baaki letters lowercase).
 
-var paragraph = prompt("Enter a paragraph:").toLowerCase();
-var sentences = paragraph.split(".");
-var result = [];
+// var paragraph = prompt("Enter a paragraph:").toLowerCase();
+// var sentences = paragraph.split(".");
+// var result = [];
 
-for (var i = 0; i < sentences.length; i++) {
-      var sentence = sentences[i].trim();
-       if (sentence.length > 0) {
-        var newSentence = sentence.charAt(0).toUpperCase() + sentence.slice(1);
-        result.push(newSentence);
-       }
-}
+// for (var i = 0; i < sentences.length; i++) {
+//       var sentence = sentences[i].trim();
+//       if (sentence.length > 0) {
+//             var newSentence = sentence.charAt(0).toUpperCase() + sentence.slice(1);
+//             result.push(newSentence);
+//       }
+// }
 
-console.log(result.join(".") + ".");
+// console.log(result.join(".") + ".");
 
+
+
+
+
+// var cleanestCities = ["cheyenne", "santa fe", "tucson", "great falls", "honolulu"];
+// var cityToCheck = prompt ("Enter your city");
+// cityToCheck = cityToCheck.toLowerCase();
+
+// for (var i = 0; i < cleanestCities.length; i++) {
+//        if (cityToCheck === cleanestCities[i]) {
+//             alert("It's one of the cleanest cities.")
+//        }
+// }
