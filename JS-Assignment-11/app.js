@@ -326,16 +326,16 @@
 
 //           SOLUTION:
 
-var string = "The quick brown fox jumps over the lazy dog";
-var lowerStr = string.toLowerCase();
-var words = lowerStr.split(" ");
+// var string = "The quick brown fox jumps over the lazy dog";
+// var lowerStr = string.toLowerCase();
+// var words = lowerStr.split(" ");
 
-var count = 0;
-for (var i = 0; i < words.length; i++) {
-    if (words[i] === "the") {
-        count ++;
-    }
-}
+// var count = 0;
+// for (var i = 0; i < words.length; i++) {
+//     if (words[i] === "the") {
+//         count++;
+//     }
+// }
 
-document.write("Text: " + string + "<br/>");
-document.write("There are " + count + " occurence(s)  of word 'the'");
+// document.write("Text: " + string + "<br/>");
+// document.write("There are " + count + " occurence(s)  of word 'the'");
